@@ -5,7 +5,7 @@ import { ThemeProvider } from "@/components/theme-provider"
 
 export const metadata: Metadata = {
   title: "WineNodes.xyz",
-  description: "Premium services",
+  description: "Sip, Savor, Stay Connected",
   icons: {
     icon: [
       {

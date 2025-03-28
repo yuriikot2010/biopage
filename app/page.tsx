@@ -57,7 +57,7 @@ export default function Home() {
             onClick={handleEnter}
             className="px-8 py-3 rounded-md border border-green-500/50 bg-black/50 text-green-400 font-mono hover:bg-green-900/20 transition-all hover:border-green-400 focus:outline-none focus:ring-2 focus:ring-green-500/50 focus:ring-offset-2 focus:ring-offset-black"
           >
-            &gt; Enter_System
+            &gt; Smash it
           </button>
         </div>
       ) : (
