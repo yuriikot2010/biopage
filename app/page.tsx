@@ -29,8 +29,8 @@ export default function Home() {
 
   // Mock music data
   const currentMusic = {
-    title: "Lofi Beats",
-    artist: "ChillHop",
+    title: "The Days",
+    artist: "Avicii",
     cover: "/placeholder.svg?height=60&width=60",
   }
 
