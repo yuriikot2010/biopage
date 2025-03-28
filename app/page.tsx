@@ -43,7 +43,7 @@ export default function Home() {
 
       {!showContent ? (
         <div className="relative z-10 flex flex-col items-center justify-center text-center">
-          <div className="w-24 h-24 mb-6 border-2 border-green-500/50 rounded-full overflow-hidden flex items-center justify-center bg-black/50">
+          <div className="w-24 h-24 mb-6 border-2 border-green-500/50 rounded-full overflow-hidden flex items-center justify-center bg-white">
             <img
               src="/placeholder.svg?height=96&width=96"
               alt="WineNodes Logo"
