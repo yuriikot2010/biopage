@@ -101,14 +101,14 @@ export default function Home() {
 
             <SocialLink icon={<Telegram className="w-5 h-5" />} title="Telegram" link="https://t.me/FORTID8C7" />
 
-            <SocialLink icon={<Mail className="w-5 h-5" />} title="Owner Contact" link="mailto:owner@winenodes.xyz" />
+            <SocialLink icon={<Mail className="w-5 h-5" />} title="Contact owner directly" link="mailto:owner@winenodes.xyz" />
 
             <SocialLink icon={<Mail className="w-5 h-5" />} title="Support" link="mailto:support@winenodes.xyz" />
           </div>
 
           {/* Footer */}
           <div className="p-4 text-center text-xs text-green-400/60 border-t border-green-500/30 font-mono">
-            © {new Date().getFullYear()} WineNodes.xyz Copyright reserved
+            © {new Date().getFullYear()} WineNodes.xyz Copying any form of contents is restricted in any way. All rights reserved.
           </div>
         </div>
       )}
