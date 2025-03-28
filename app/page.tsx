@@ -1,5 +1,3 @@
-"use client"
-
 import { useRef, useState } from "react"
 import { Globe, Mail, Disc, TextIcon as Telegram, Music, Volume2, VolumeX } from "lucide-react"
 import Link from "next/link"
@@ -106,8 +104,19 @@ export default function Home() {
             <SocialLink icon={<Mail className="w-5 h-5" />} title="Support" link="mailto:support@winenodes.xyz" />
           </div>
 
-          {/* Footer */}
+          {/* DMCA Badge */}
           <div className="p-4 text-center text-xs text-green-400/60 border-t border-green-500/30 font-mono">
+            <a
+              href="//www.dmca.com/Protection/Status.aspx?ID=b010b26b-8a0f-412f-a962-c38d21e42044"
+              title="DMCA.com Protection Status"
+              className="dmca-badge"
+            >
+              <img
+                src="https://images.dmca.com/Badges/dmca-badge-w100-5x1-01.png?ID=b010b26b-8a0f-412f-a962-c38d21e42044"
+                alt="DMCA.com Protection Status"
+              />
+            </a>
+            <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"></script>
             © {new Date().getFullYear()} WineNodes.xyz Copying any form of contents is restricted in any way. All rights reserved.
           </div>
         </div>
