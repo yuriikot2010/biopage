@@ -45,7 +45,7 @@ export default function Home() {
         <div className="relative z-10 flex flex-col items-center justify-center text-center">
           <div className="w-24 h-24 mb-6 border-2 border-green-500/50 rounded-full overflow-hidden flex items-center justify-center bg-white">
             <img
-              src="/placeholder.svg?height=96&width=96"
+              src="/placeholder.svg"
               alt="WineNodes Logo"
               className="w-full h-full object-cover"
             />
@@ -64,9 +64,9 @@ export default function Home() {
         <div className="relative z-10 w-full max-w-md mx-auto bg-black/80 border border-green-500/30 rounded-md overflow-hidden shadow-lg shadow-green-900/20 backdrop-blur-sm">
           <div className="relative border-b border-green-500/30">
             <div className="p-6 flex flex-col items-center">
-              <div className="w-20 h-20 mb-4 border-2 border-green-500/50 rounded-full overflow-hidden flex items-center justify-center">
+              <div className="w-20 h-20 mb-4 border-2 border-green-500/50 rounded-full overflow-hidden flex items-center justify-center bg-white">
                 <img
-                  src="/placeholder.svg?height=80&width=80"
+                  src="/placeholder.svg"
                   alt="WineNodes Logo"
                   className="w-full h-full object-cover"
                 />
