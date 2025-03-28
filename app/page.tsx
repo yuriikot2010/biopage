@@ -39,7 +39,7 @@ export default function Home() {
       <div className="fixed inset-0 z-0 bg-black"></div>
 
       {/* Hidden Audio Element */}
-      <audio ref={audioRef} src="https://www.winenodes.xyz/placeholder.mp3" type="audio/mp3" loop />
+      <audio ref={audioRef} src="https://od.lk/s/NDBfMTE3NTM0ODAwXw/%D0%93%D0%98%D0%9C%D0%9D%20%D0%AF%D0%9F%D0%9E%D0%9D%D0%A1%D0%9A%D0%9E%D0%99%20%D0%98%D0%9C%D0%9F%D0%95%D0%A0%D0%98%D0%98.mp3" type="audio/mp3" loop />
 
       {!showContent ? (
         <div className="relative z-10 flex flex-col items-center justify-center text-center">
