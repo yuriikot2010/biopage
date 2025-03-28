@@ -6,7 +6,7 @@ import Link from "next/link"
 
 export default function Home() {
   const [showContent, setShowContent] = useState(false)
-  const [isMuted, setIsMuted] = useState(true)
+  const [isMuted, setIsMuted] = useState(false)
   const audioRef = useRef<HTMLAudioElement | null>(null)
 
   const handleEnter = () => {
@@ -73,7 +73,7 @@ export default function Home() {
               </div>
 
               <h1 className="text-2xl font-bold text-green-400 mb-2 font-mono">WineNodes</h1>
-              <p className="text-sm text-green-300/70 mb-4 font-mono">&gt; Premium_node_provider</p>
+              <p className="text-sm text-green-300/70 mb-4 font-mono">&gt; Premium_services</p>
 
               {/* Music Player */}
               <div className="w-full flex items-center space-x-3 bg-black/50 p-3 rounded-md border border-green-500/30">
@@ -100,8 +100,6 @@ export default function Home() {
             <SocialLink icon={<Disc className="w-5 h-5" />} title="Discord" link="https://discord.gg/jP8QCaDVvM" />
 
             <SocialLink icon={<Telegram className="w-5 h-5" />} title="Telegram" link="https://t.me/FORTID8C7" />
-
-            <SocialLink icon={<Globe className="w-5 h-5" />} title="Website" link="https://winenodes.xyz" />
 
             <SocialLink icon={<Mail className="w-5 h-5" />} title="Owner Contact" link="mailto:owner@winenodes.xyz" />
 

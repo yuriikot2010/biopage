@@ -5,7 +5,7 @@ import { ThemeProvider } from "@/components/theme-provider"
 
 export const metadata: Metadata = {
   title: "WineNodes.xyz",
-  description: "Premium node provider for blockchain networks",
+  description: "Premium services",
   icons: {
     icon: [
       {
@@ -15,13 +15,6 @@ export const metadata: Metadata = {
       {
         url: "/favicon-96x96.png",
         sizes: "96x96",
-        type: "image/png",
-      },
-    ],
-    apple: [
-      {
-        url: "/apple-touch-icon.png",
-        sizes: "180x180",
         type: "image/png",
       },
     ],
