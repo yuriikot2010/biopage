@@ -1,31 +1,47 @@
 "use client"
 
-import { useState, useRef } from "react"
+import { useState, useRef, useEffect } from "react"
 import { Play, Pause, Volume2, VolumeX } from "lucide-react"
 
 interface AudioPlayerProps {
   audioSrc: string
-  onPlay?: () => void // Callback to trigger playback
+  autoPlay?: boolean
 }
 
-export default function AudioPlayer({ audioSrc, onPlay }: AudioPlayerProps) {
+export default function AudioPlayer({ audioSrc, autoPlay = false }: AudioPlayerProps) {
   const [isPlaying, setIsPlaying] = useState(false)
   const [isMuted, setIsMuted] = useState(true)
   const audioRef = useRef<HTMLAudioElement | null>(null)
 
-  const playAudio = () => {
+  useEffect(() => {
     if (audioRef.current) {
-      audioRef.current.muted = false
-      audioRef.current.play().then(() => setIsPlaying(true)).catch(console.error)
+      audioRef.current.volume = 0.5
+
+      if (autoPlay) {
+        // Most browsers require user interaction before playing audio
+        // This is just a placeholder for when the user enables audio
+        audioRef.current.muted = true
+        const playPromise = audioRef.current.play()
+
+        if (playPromise !== undefined) {
+          playPromise
+            .then((_) => {
+              setIsPlaying(true)
+            })
+            .catch((error) => {
+              console.log("Autoplay prevented by browser:", error)
+            })
+        }
+      }
     }
-  }
+  }, [autoPlay])
 
   const togglePlay = () => {
     if (audioRef.current) {
       if (isPlaying) {
         audioRef.current.pause()
       } else {
-        playAudio()
+        audioRef.current.play()
       }
       setIsPlaying(!isPlaying)
     }
@@ -40,7 +56,7 @@ export default function AudioPlayer({ audioSrc, onPlay }: AudioPlayerProps) {
 
   return (
     <div className="flex items-center space-x-2">
-      <audio ref={audioRef} src={audioSrc} loop muted />
+      <audio ref={audioRef} src={audioSrc} loop />
 
       <button
         onClick={togglePlay}
@@ -60,3 +76,4 @@ export default function AudioPlayer({ audioSrc, onPlay }: AudioPlayerProps) {
     </div>
   )
 }
+
