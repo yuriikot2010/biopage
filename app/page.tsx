@@ -73,7 +73,7 @@ export default function Home() {
               </div>
 
               <h1 className="text-2xl font-bold text-green-400 mb-2 font-mono">WineNodes</h1>
-              <p className="text-sm text-green-300/70 mb-4 font-mono">&gt; Premium_services</p>
+              <p className="text-sm text-green-300/70 mb-4 font-mono">&gt; Sip, Savor, Stay Connected</p>
 
               {/* Music Player */}
               <div className="w-full flex items-center space-x-3 bg-black/50 p-3 rounded-md border border-green-500/30">
