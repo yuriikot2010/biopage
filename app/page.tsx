@@ -1,3 +1,5 @@
+"use client"
+
 import { useRef, useState } from "react"
 import { Globe, Mail, Disc, TextIcon as Telegram, Music, Volume2, VolumeX } from "lucide-react"
 import Link from "next/link"
