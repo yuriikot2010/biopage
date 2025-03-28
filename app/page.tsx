@@ -1,41 +1,47 @@
 "use client"
 
-import { useState } from "react"
+import { useRef, useState } from "react"
 import { Globe, Mail, Disc, TextIcon as Telegram, Music, Volume2, VolumeX } from "lucide-react"
 import Link from "next/link"
-import AudioPlayer from "./audio-player"
 
 export default function Home() {
   const [showContent, setShowContent] = useState(false)
   const [isMuted, setIsMuted] = useState(true)
+  const audioRef = useRef<HTMLAudioElement | null>(null)
 
-  // This would be replaced with actual music data in the future
+  const handleEnter = () => {
+    setShowContent(true)
+
+    // Play audio when the button is clicked
+    if (audioRef.current) {
+      audioRef.current.muted = false
+      audioRef.current.volume = 0.5
+      audioRef.current.play().catch(err => console.error("Playback error:", err))
+    }
+  }
+
+  const toggleMute = () => {
+    if (audioRef.current) {
+      audioRef.current.muted = !isMuted
+      setIsMuted(!isMuted)
+    }
+  }
+
+  // Mock music data
   const currentMusic = {
     title: "Lofi Beats",
     artist: "ChillHop",
     cover: "/placeholder.svg?height=60&width=60",
   }
 
-  const handleEnter = () => {
-    setShowContent(true)
-  }
-
-  const toggleMute = () => {
-    setIsMuted(!isMuted)
-  }
-
   return (
     <main className="flex min-h-screen flex-col items-center justify-center p-4 bg-black text-white overflow-hidden">
-      {/* Pure black background */}
       <div className="fixed inset-0 z-0 bg-black"></div>
 
-      {/* Audio player (hidden but autoplay) */}
-      <div className="hidden">
-        <AudioPlayer audioSrc="/placeholder.mp3" autoPlay={true} />
-      </div>
+      {/* Hidden Audio Element */}
+      <audio ref={audioRef} src="/placeholder.mp3" loop />
 
       {!showContent ? (
-        // Intro Screen
         <div className="relative z-10 flex flex-col items-center justify-center text-center">
           <div className="w-24 h-24 mb-6 border-2 border-green-500/50 rounded-full overflow-hidden flex items-center justify-center bg-black/50">
             <img
@@ -55,9 +61,7 @@ export default function Home() {
           </button>
         </div>
       ) : (
-        // Main Content
         <div className="relative z-10 w-full max-w-md mx-auto bg-black/80 border border-green-500/30 rounded-md overflow-hidden shadow-lg shadow-green-900/20 backdrop-blur-sm">
-          {/* Header with music player */}
           <div className="relative border-b border-green-500/30">
             <div className="p-6 flex flex-col items-center">
               <div className="w-20 h-20 mb-4 border-2 border-green-500/50 rounded-full overflow-hidden flex items-center justify-center">
@@ -69,7 +73,6 @@ export default function Home() {
               </div>
 
               <h1 className="text-2xl font-bold text-green-400 mb-2 font-mono">WineNodes</h1>
-
               <p className="text-sm text-green-300/70 mb-4 font-mono">&gt; Premium_node_provider</p>
 
               {/* Music Player */}
@@ -138,4 +141,3 @@ function SocialLink({ icon, title, link }) {
     </Link>
   )
 }
-
