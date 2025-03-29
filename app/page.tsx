@@ -6,7 +6,8 @@ import { useRef, useState, useEffect } from "react"
 import { Globe, Mail, Disc, TextIcon as Telegram, Music, Volume2, VolumeX, Server, Cloud, Shield } from "lucide-react"
 import Link from "next/link"
 import Head from "next/head"
-
+import { SpeedInsights } from "@vercel/speed-insights/next"
+import { Analytics } from "@vercel/analytics/react"
 // This component would normally go in a separate file
 export function JsonLd({ data }: { data: any }) {
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }} />
