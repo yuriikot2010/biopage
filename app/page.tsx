@@ -97,7 +97,7 @@ export default function Home() {
       "query-input": "required name=search_term_string",
     },
     description:
-      "Premium VPS, Pterodactyl and dedicated web hosting services with exceptional performance and reliability.",
+      "Premium VPS, Pterodactyl, dedicated and web hosting services with exceptional performance and reliability.",
     offers: {
       "@type": "AggregateOffer",
       priceCurrency: "USD",
