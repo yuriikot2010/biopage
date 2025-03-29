@@ -1,45 +1,34 @@
 import type React from "react"
-import "./globals.css"
 import type { Metadata } from "next"
+import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 
 export const metadata: Metadata = {
-  title: "WineNodes.xyz",
-  description: "Sip, Savor, Stay Connected",
-  icons: {
-    icon: [
-      {
-        url: "/favicon.ico",
-        sizes: "any",
-      },
-      {
-        url: "/favicon.svg",
-        type: "image/svg+xml",
-      },
-      {
-        url: "/favicon-96x96.png",
-        sizes: "96x96",
-        type: "image/png",
-      },
-    ],
-    apple: [
-      {
-        url: "/apple-touch-icon.png",
-        sizes: "180x180",
-        type: "image/png",
-      },
-    ],
-    other: [
-      {
-        rel: "manifest",
-        url: "/site.webmanifest",
-      },
-    ],
+  title: "WineNodes | VPS, Pterodactyl & Dedicated Web Hosting",
+  description:
+    "WineNodes (Вайн Нодес) offers premium VPS hosting, Pterodactyl panels, and dedicated web hosting services with exceptional performance and reliability.",
+  keywords:
+    "winenodes, wine nodes, вайн нодес, winenodes.xyz, vps hosting, pterodactyl, dedicated servers, web hosting, хостинг",
+  alternates: {
+    canonical: "https://winenodes.xyz",
+    languages: {
+      en: "https://winenodes.xyz/en",
+      ru: "https://winenodes.xyz/ru",
+    },
   },
-  appleWebApp: {
-    title: "winenodes",
+  openGraph: {
+    title: "WineNodes | VPS, Pterodactyl & Dedicated Web Hosting",
+    description:
+      "Premium VPS, Pterodactyl and dedicated web hosting services with exceptional performance and reliability.",
+    url: "https://winenodes.xyz",
+    siteName: "WineNodes",
+    locale: "en_US",
+    type: "website",
   },
-    generator: 'v0.dev'
+  robots: {
+    index: true,
+    follow: true,
+  },
 }
 
 export default function RootLayout({
@@ -48,8 +37,13 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <head />
+    <html lang="en">
+      <head>
+        {/* Add hreflang tags for language variants */}
+        <link rel="alternate" hrefLang="en" href="https://winenodes.xyz/en" />
+        <link rel="alternate" hrefLang="ru" href="https://winenodes.xyz/ru" />
+        <link rel="alternate" hrefLang="x-default" href="https://winenodes.xyz" />
+      </head>
       <body>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
           {children}
@@ -59,6 +53,3 @@ export default function RootLayout({
   )
 }
 
-
-
-import './globals.css'
