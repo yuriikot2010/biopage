@@ -262,7 +262,7 @@ export default function Home() {
               <SocialLink
                 icon={<Telegram className="w-5 h-5" />}
                 title={t.telegram}
-                link="https://t.me/FORTID8C7"
+                link="https://t.me/winenodes"
                 description="Follow us on Telegram for instant updates"
               />
 
