@@ -290,6 +290,9 @@ export default function Home() {
                   title="DMCA.com Protection Status"
                   className="dmca-badge"
                 >
+                  <a href="https://www.abuseipdb.com/user/196795" title="AbuseIPDB is an IP address blacklist for webmasters and sysadmins to report IP addresses engaging in abusive behavior on their networks">
+	<img src="https://www.abuseipdb.com/contributor/196795.svg" alt="AbuseIPDB Contributor Badge" style="width: 401px;">
+</a>
                   <img
                     src="https://images.dmca.com/Badges/dmca_protected_sml_120y.png?ID=b010b26b-8a0f-412f-a962-c38d21e42044"
                     alt="DMCA.com Protection Status"
