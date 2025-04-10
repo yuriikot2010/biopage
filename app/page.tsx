@@ -253,13 +253,14 @@ export default function Home() {
 
             {/* Social Links */}
             <div className="p-6 space-y-3">
+              
               <SocialLink
                 icon={<Disc className="w-5 h-5" />}
                 title={t.discord}
                 link="https://discord.gg/jP8QCaDVvM"
                 description="Join our Discord community for support and updates"
               />
-              <a href="https://discord.com/users/1341844109446479914"><img src="https://lanyard.cnrad.dev/api/1341844109446479914?hideClan=true&hideDiscrim=true&theme=dark" /></a>
+              
 
               <SocialLink
                 icon={<Telegram className="w-5 h-5" />}
