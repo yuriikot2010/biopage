@@ -287,16 +287,6 @@ export default function Home() {
 <div className="p-4 text-center text-xs text-green-400/60 border-t border-green-500/30 font-mono">
   <div className="flex justify-center space-x-4 mb-2">
     <a
-      href="//www.dmca.com/Protection/Status.aspx?ID=b010b26b-8a0f-412f-a962-c38d21e42044"
-      title="DMCA.com Protection Status"
-      className="dmca-badge"
-    >
-      <img
-        src="https://images.dmca.com/Badges/dmca_protected_sml_120y.png?ID=b010b26b-8a0f-412f-a962-c38d21e42044"
-        alt="DMCA.com Protection Status"
-      />
-    </a>
-    <a
       href="https://www.abuseipdb.com/user/196795"
       title="AbuseIPDB is an IP address blacklist for webmasters and sysadmins to report IP addresses engaging in abusive behavior on their networks"
     >
